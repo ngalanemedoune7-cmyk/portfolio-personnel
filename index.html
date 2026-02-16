@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <title>Portfolio - Medoune NGALANE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3B82F6",
+            secondary: "#6366F1",
+            accent: "#06B6D4",
+            dark: "#0f172a"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-dark text-white font-sans">
+
+<header class="fixed w-full z-50 backdrop-blur-lg bg-white/10 border-b border-white/20">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-xl font-bold tracking-wider">Medoune NGALANE</h1>
+
+    <nav class="hidden md:flex space-x-6 text-sm">
+      <a href="#hero" class="hover:text-primary">Accueil</a>
+      <a href="#about" class="hover:text-primary">À propos</a>
+      <a href="#formation" class="hover:text-primary">Formation</a>
+      <a href="#experience" class="hover:text-primary">Expériences</a>
+      <a href="#competences" class="hover:text-primary">Compétences</a>
+      <a href="#projets" class="hover:text-primary">Projets</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+
+    <button id="menuToggle" class="md:hidden flex flex-col justify-between w-8 h-6 focus:outline-none">
+      <span class="block h-1 w-full bg-white rounded"></span>
+      <span class="block h-1 w-full bg-white rounded"></span>
+      <span class="block h-1 w-full bg-white rounded"></span>
+    </button>
+  </div>
+
+  <nav id="mobileMenu" class="md:hidden absolute top-full left-0 w-full bg-black/80 backdrop-blur-lg border-t border-white/20 hidden flex-col items-center space-y-4 py-6 text-white text-lg z-40">
+    <a href="#hero" class="hover:text-primary">Accueil</a>
+    <a href="#about" class="hover:text-primary">À propos</a>
+    <a href="#formation" class="hover:text-primary">Formation</a>
+    <a href="#experience" class="hover:text-primary">Expériences</a>
+    <a href="#competences" class="hover:text-primary">Compétences</a>
+    <a href="#projets" class="hover:text-primary">Projets</a>
+    <a href="#contact" class="hover:text-primary">Contact</a>
+  </nav>
+</header>
+
+<section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-black relative overflow-hidden pt-20">
+  
+  <div class="absolute w-96 h-96 bg-primary/20 rounded-full blur-3xl top-20 left-10"></div>
+  <div class="absolute w-80 h-80 bg-accent/20 rounded-full blur-3xl bottom-20 right-10"></div>
+  <div class="absolute w-60 h-60 bg-secondary/20 rounded-full blur-3xl top-40 right-40"></div>
+
+  <div class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-12 items-center relative z-10">
+    
+    <div class="text-center md:text-left">
+   
+      <p class="text-accent font-semibold mb-4 flex items-center justify-center md:justify-start">
+        <span class="w-2 h-2 bg-accent rounded-full mr-2"></span>
+        👋 Bonjour, je suis
+      </p>
+    
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+        Medoune <span class="text-primary">NGALANE</span>
+      </h1>
+  
+      <h2 class="text-xl md:text-2xl text-gray-300 mb-6">
+        Étudiant en Licence 2 Génie Informatique & <span class="text-accent">Développeur Web Front-End</span>
+      </h2>
+    
+      <p class="text-gray-300 max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
+        Passionné par le développement web, je crée des interfaces modernes et interactives en combinant logique, design et performance.
+      </p>
+  
+      <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+        <a href="#projets" class="bg-primary text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2">
+          <i class="fas fa-code"></i> Voir mes projets
+        </a>
+        <a href="#contact" class="bg-white/10 text-white border border-white/20 px-6 py-3 rounded-xl backdrop-blur-sm flex items-center gap-2">
+          <i class="fas fa-paper-plane"></i> Me contacter
+        </a>
+      </div>
+    
+      <div class="mt-6 md:hidden">
+        <span class="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm border border-primary/30">
+          <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+          Disponible pour des missions
+        </span>
+      </div>
+      
+    </div>
+    
+    <div class="relative flex justify-center">
+      
+      <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 blur-2xl"></div>
+      
+      <div class="relative w-64 h-64 md:w-80 md:h-80">
+   
+        <div class="w-full h-full rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl">
+          <img 
+            src="assets/WhatsApp Image 2026-02-04 at 17.13.50.jpeg" 
+            alt="Medoune NGALANE" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+  
+        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-primary/30 flex items-center gap-2">
+          <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+          <span class="font-bold text-primary text-sm">Disponible</span>
+        </div>
+     
+        <div class="absolute -top-4 -right-4 bg-gradient-to-r from-primary to-accent p-3 rounded-xl shadow-lg hidden md:block">
+          <div class="text-white text-center">
+            <div class="text-xl font-bold">1+</div>
+            <div class="text-xs">années</div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block">
+    <a href="#about" class="text-gray-400">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+  </div>
+  
+</section>
+
+<section id="about" class="py-20 bg-slate-900">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    
+    <div class="space-y-8">
+      <h2 class="text-3xl font-bold text-primary">À propos</h2>
+      <div class="space-y-4 text-gray-300 leading-relaxed">
+        <p>Je suis développeur web passionné, spécialisé dans la conception et le développement d'interfaces modernes, performantes et entièrement responsive.</p>
+        <p>Motivé par l'innovation et l'amélioration continue, je m'investis pleinement dans chaque projet afin de proposer des solutions efficaces, structurées et adaptées aux besoins des utilisateurs.</p>
+        <p>Curieux, rigoureux et orienté résultats, je combine compétences techniques et sens du design pour créer des expériences web fluides, intuitives et professionnelles.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="flex items-center">
+          <div class="bg-primary/10 p-3 rounded-full mr-4"><i class="fas fa-graduation-cap text-primary"></i></div>
+          <div><div class="font-bold text-white">BACALAURÉAT</div><div class="text-gray-400 text-sm">LE CAPITOLE</div></div>
+        </div>
+        <div class="flex items-center">
+          <div class="bg-secondary/10 p-3 rounded-full mr-4"><i class="fas fa-map-marker-alt text-secondary"></i></div>
+          <div><div class="font-bold text-white">DAKAR, SÉNÉGAL</div><div class="text-gray-400 text-sm">Localisation</div></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-white">Centres d'intérêt</h4>
+        <div class="flex flex-wrap gap-3">
+          <span class="bg-gradient-to-r from-primary/20 to-primary/5 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm border border-primary/30 flex items-center"><i class="fas fa-code mr-2 text-primary"></i> Développement Web</span>
+          <span class="bg-gradient-to-r from-secondary/20 to-secondary/5 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm border border-secondary/30 flex items-center"><i class="fas fa-paint-brush mr-2 text-secondary"></i> UI/UX Design</span>
+          <span class="bg-gradient-to-r from-accent/20 to-accent/5 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm border border-accent/30 flex items-center"><i class="fab fa-python mr-2 text-accent"></i> Python</span>
+          <span class="bg-gradient-to-r from-purple-500/20 to-purple-500/5 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm border border-purple-500/30 flex items-center"><i class="fas fa-gamepad mr-2 text-purple-400"></i> Jeux vidéo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" 
+           alt="Développement web" class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+      <div class="absolute -bottom-6 -right-6 bg-primary p-6 rounded-2xl shadow-xl">
+        <div class="text-3xl font-bold text-white">1+</div>
+        <div class="text-sm text-white/90">Années d'expérience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formation" class="py-20 bg-gradient-to-r from-slate-800 to-slate-900">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold mb-12 text-center text-primary">
+      <i class="fas fa-graduation-cap mr-3"></i> Formation
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+    
+      <div class="space-y-6">
+  
+        <div class="bg-black/40 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+          <div class="text-accent font-semibold text-lg mb-2">2022 - 2023</div>
+          <h3 class="text-2xl font-bold mb-2 text-white">BACCALAURÉAT</h3>
+          <div class="text-primary font-medium mb-3 text-lg">Établissement Le CAPITOLE</div>
+          <p class="text-gray-200 mb-3">Spécialisation en baccalauréat littéraire</p>
+          <div class="mt-2 text-sm text-gray-300 bg-white/5 inline-block px-4 py-1.5 rounded-full">
+            <i class="fas fa-award mr-1 text-accent"></i> Mention : PASSABLE
+          </div>
+        </div>
+  
+        <div class="bg-black/40 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+          <div class="text-accent font-semibold text-lg mb-2">2026</div>
+          <h3 class="text-2xl font-bold mb-2 text-white">Stagiaire Développeur</h3>
+          <div class="text-primary font-medium mb-3 text-lg">Stage en développement web</div>
+          <p class="text-gray-200 leading-relaxed">
+            Conception et développement d'une landing page moderne en React pour la présentation
+            de Taskade. Intégration des composants, mise en place du responsive design
+            et optimisation de l'interface utilisateur.
+          </p>
+        </div>
+        
+      </div> 
+ 
+      <div class="space-y-6">
+
+        <div class="bg-black/40 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+          <div class="text-accent font-semibold text-lg mb-2">2024 - Présent</div>
+          <h3 class="text-2xl font-bold mb-2 text-white">Licence 2 Génie Informatique</h3>
+          <div class="text-primary font-medium mb-3 text-lg">Université Professionnelle (UNIPRO)</div>
+          <div class="flex items-center flex-wrap gap-2">
+            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium border border-accent/30">
+              <i class="fas fa-circle-notch mr-1 text-xs"></i> En cours
+            </span>
+            <span class="text-gray-200">Spécialisation : Développement web front-end</span>
+          </div>
+        </div>
+      
+        <div class="rounded-2xl overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" 
+            alt="Formation en développement"
+            class="rounded-2xl shadow-2xl w-full h-56 object-cover"
+          >
+        </div>
+        
+      </div> 
+      
+    </div> 
+    
+  </div> 
+</section>
+
+<section id="experience" class="py-20 bg-slate-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-4 text-primary text-center">
+      <i class="fas fa-briefcase mr-3"></i> Expériences Professionnelles
+    </h2>
+
+    <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+      Au cours de mon parcours, j'ai travaillé sur plusieurs projets académiques et personnels 
+      me permettant de concevoir des interfaces web modernes, développer des fonctionnalités dynamiques, 
+      et appliquer les bonnes pratiques de développement. Chaque expérience a renforcé ma capacité 
+      à résoudre des problèmes techniques et à livrer des solutions efficaces.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+   
+      <div class="bg-black/40 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-code text-primary text-xl"></i>
+        </div>
+        <div class="text-accent font-semibold text-lg mb-2">2024 - 2025</div>
+        <h3 class="text-xl font-bold mb-2 text-white">Développeur Web Front-End</h3>
+        <div class="font-medium text-gray-400 mb-3">Projet académique - Medoune Immo</div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          Conception et développement d'un site web immobilier comprenant une page d'accueil,
+          une section de logements, un formulaire d'inscription et une page de contact.
+          Ce projet m'a permis de renforcer mes bases en intégration web et structuration de pages.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">HTML</span>
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">CSS</span>
+        </div>
+      </div>
+    
+      <div class="bg-black/40 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+        <div class="bg-secondary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-laptop-code text-secondary text-xl"></i>
+        </div>
+        <div class="text-accent font-semibold text-lg mb-2">2024 - 2025</div>
+        <h3 class="text-xl font-bold mb-2 text-white">Développeur Web Front-End</h3>
+        <div class="font-medium text-gray-400 mb-3">Portfolio personnel</div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          Réalisation de mon portfolio personnel afin de présenter mon profil,
+          mes compétences et mes projets. Accent mis sur un design moderne,
+          une navigation fluide et une interface responsive.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">HTML</span>
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">CSS</span>
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Tailwind</span>
+        </div>
+      </div>
+     
+      <div class="bg-black/40 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+        <div class="bg-accent/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-rocket text-accent text-xl"></i>
+        </div>
+        <div class="text-accent font-semibold text-lg mb-2">2023 - Présent</div>
+        <h3 class="text-xl font-bold mb-2 text-white">Étudiant en Génie Informatique</h3>
+        <div class="font-medium text-gray-400 mb-3">Université Professionnelle (UNIPRO)</div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          Acquisition de solides bases en informatique, développement web,
+          algorithmique et bases de données. Réalisation de projets académiques
+          orientés web et initiation aux technologies modernes.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">HTML</span>
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">CSS</span>
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Python</span>
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">MySQL</span>
+        </div>
+      </div>
+      
+    </div> 
+    
+  </div>
+</section>
+
+<section id="competences" class="py-20 bg-gradient-to-r from-slate-800 to-slate-900">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-center mb-4 text-primary">
+      <i class="fas fa-cogs mr-3"></i> Compétences
+    </h2>
+
+    <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+      Développeur passionné avec une stack technique variée, je combine créativité et rigueur 
+      pour concevoir des applications web modernes et performantes.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      
+      <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+        <h3 class="text-2xl font-bold mb-8 flex items-center text-white">
+          <i class="fas fa-code text-primary mr-3"></i> Front-End
+        </h3>
+        
+        <div class="space-y-6">
+          
+          <div>
+            <div class="flex justify-between text-gray-300 mb-2">
+              <span>HTML5 / CSS3</span>
+              <span class="text-primary font-semibold">90%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full" style="width:90%"></div>
+            </div>
+          </div>
+   
+          <div>
+            <div class="flex justify-between text-gray-300 mb-2">
+              <span>Tailwind CSS</span>
+              <span class="text-primary font-semibold">80%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full" style="width:80%"></div>
+            </div>
+          </div>
+      
+          <div>
+            <div class="flex justify-between text-gray-300 mb-2">
+              <span>JavaScript / TypeScript</span>
+              <span class="text-primary font-semibold">55%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full" style="width:55%"></div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="flex justify-between text-gray-300 mb-2">
+              <span>Responsive Design</span>
+              <span class="text-primary font-semibold">85%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full" style="width:85%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="text-2xl font-bold mt-10 mb-8 flex items-center text-white">
+          <i class="fas fa-database text-secondary mr-3"></i> Back-End & Base de Données
+        </h3>
+        
+        <div class="space-y-6">
+         
+          <div>
+            <div class="flex justify-between text-gray-300 mb-2">
+              <span>MySQL</span>
+              <span class="text-primary font-semibold">35%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-secondary to-accent rounded-full" style="width:35%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between text-gray-300 mb-2">
+              <span>Python</span>
+              <span class="text-primary font-semibold">50%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-secondary to-accent rounded-full" style="width:50%"></div>
+            </div>
+          </div>
+      
+          <div>
+            <div class="flex justify-between text-gray-300 mb-2">
+              <span>Algorithmique & Logique</span>
+              <span class="text-primary font-semibold">60%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-secondary to-accent rounded-full" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="space-y-8">
+       
+        <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+          <h3 class="text-2xl font-bold mb-6 flex items-center text-white">
+            <i class="fas fa-users text-accent mr-3"></i> Professionnelles
+          </h3>
+          
+          <div class="space-y-5">
+           
+            <div class="flex gap-4">
+              <div class="bg-primary/10 p-3 rounded-full h-fit">
+                <i class="fas fa-paint-brush text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Design graphique</h4>
+                <p class="text-gray-300 text-sm">Maîtrise de Photoshop et Illustrator pour créer des visuels et interfaces attractives.</p>
+              </div>
+            </div>
+       
+            <div class="flex gap-4">
+              <div class="bg-secondary/10 p-3 rounded-full h-fit">
+                <i class="fas fa-file-excel text-secondary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Bureautique et gestion</h4>
+                <p class="text-gray-300 text-sm">Compétences avancées sur Excel et Word pour l'organisation et l'analyse des données.</p>
+              </div>
+            </div>
+      
+            <div class="flex gap-4">
+              <div class="bg-accent/10 p-3 rounded-full h-fit">
+                <i class="fab fa-wordpress text-accent"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Création de sites web</h4>
+                <p class="text-gray-300 text-sm">Utilisation de WordPress pour développer des sites fonctionnels et administrables facilement.</p>
+              </div>
+            </div>
+      
+            <div class="flex gap-4">
+              <div class="bg-purple-500/10 p-3 rounded-full h-fit">
+                <i class="fas fa-hands-helping text-purple-400"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Communication et organisation</h4>
+                <p class="text-gray-300 text-sm">Capacité à collaborer efficacement sur des projets, gérer des tâches et respecter les délais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+          <h3 class="text-2xl font-bold mb-6 flex items-center text-white">
+            <i class="fas fa-tools text-green-400 mr-3"></i> Outils & Méthodes
+          </h3>
+          
+          <div class="flex flex-wrap gap-3">
+          
+            <div class="bg-black/30 px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2">
+              <i class="fab fa-git-alt text-orange-500"></i>
+              <span class="text-gray-300 text-sm">Git</span>
+            </div>
+   
+            <div class="bg-black/30 px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2">
+              <i class="fas fa-code text-blue-400"></i>
+              <span class="text-gray-300 text-sm">VS Code</span>
+            </div>
+   
+            <div class="bg-black/30 px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2">
+              <i class="fas fa-database text-green-500"></i>
+              <span class="text-gray-300 text-sm">MySQL</span>
+            </div>
+       
+            <div class="bg-black/30 px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2">
+              <i class="fab fa-python text-yellow-500"></i>
+              <span class="text-gray-300 text-sm">Python</span>
+            </div>
+      
+            <div class="bg-black/30 px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2">
+              <i class="fas fa-database text-green-400"></i>
+              <span class="text-gray-300 text-sm">MariaDB</span>
+            </div>
+   
+            <div class="bg-black/30 px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2">
+              <i class="fas fa-terminal text-purple-500"></i>
+              <span class="text-gray-300 text-sm">Cygwin</span>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="mt-16">
+      <h3 class="text-2xl font-bold text-center mb-8 text-white">
+        <i class="fas fa-layer-group text-primary mr-3"></i> Technologies maîtrisées
+      </h3>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="bg-white/5 p-6 rounded-xl text-center">
+          <i class="fab fa-html5 text-6xl text-orange-500"></i>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl text-center">
+          <i class="fab fa-css3-alt text-6xl text-blue-500"></i>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl text-center">
+          <i class="fab fa-js text-6xl text-yellow-500"></i>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl text-center">
+          <i class="fab fa-python text-6xl text-yellow-500"></i>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section id="projets" class="py-20 bg-slate-900">
+  <div class="max-w-6xl mx-auto px-6">
+ 
+    <h2 class="text-3xl font-bold text-center mb-4 text-primary">
+      <i class="fas fa-rocket mr-3"></i> Projets
+    </h2>
+ 
+    <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+      Découvrez mes réalisations, alliant design moderne et fonctionnalités performantes.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="bg-black/40 rounded-2xl border border-white/10 overflow-hidden">
+  
+        <div class="relative h-64">
+          <img 
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop" 
+            alt="Site immobilier"
+            class="w-full h-full object-cover"
+          >
+          <span class="absolute top-4 right-4 bg-accent/90 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
+            Projet académique
+          </span>
+        </div>
+ 
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-3 text-white">Site Web Immobilier</h3>
+          
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Développement d'un site web immobilier permettant de présenter des logements de manière claire et structurée.
+          </p>
+ 
+          <div class="mb-4">
+            <h4 class="text-primary font-semibold mb-2 flex items-center">
+              <i class="fas fa-check-circle text-accent mr-2 text-sm"></i> Fonctionnalités :
+            </h4>
+            <ul class="grid grid-cols-2 gap-2 text-sm text-gray-300">
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Page d'accueil</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Section annonces</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Formulaire d'inscription</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Page de contact</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Design responsive</li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">HTML</span>
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">CSS</span>
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Responsive</span>
+          </div>
+     
+          <div class="flex gap-4">
+            <a href="#" target="_blank" class="flex-1 bg-primary/20 text-white border border-primary/50 px-4 py-3 rounded-xl flex items-center justify-center gap-2">
+              <i class="fab fa-github text-xl"></i>
+              <span class="font-medium">Code</span>
+            </a>
+            <a href="#" target="_blank" class="flex-1 bg-accent/20 text-white border border-accent/50 px-4 py-3 rounded-xl flex items-center justify-center gap-2">
+              <i class="fas fa-external-link-alt text-xl"></i>
+              <span class="font-medium">Démo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+   
+      <div class="bg-black/40 rounded-2xl border border-white/10 overflow-hidden">
+
+        <div class="relative h-64">
+          <img 
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070&auto=format&fit=crop" 
+            alt="Portfolio personnel"
+            class="w-full h-full object-cover"
+          >
+          <span class="absolute top-4 right-4 bg-accent/90 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
+            Projet personnel
+          </span>
+        </div>
+  
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-3 text-white">Portfolio Personnel</h3>
+          
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Création de mon portfolio personnel afin de présenter mon profil, mes compétences techniques et mes projets.
+          </p>
+
+          <div class="mb-4">
+            <h4 class="text-primary font-semibold mb-2 flex items-center">
+              <i class="fas fa-check-circle text-accent mr-2 text-sm"></i> Caractéristiques :
+            </h4>
+            <ul class="grid grid-cols-2 gap-2 text-sm text-gray-300">
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Design moderne</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Interface responsive</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Animations</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> UX optimisée</li>
+              <li class="flex items-center"><span class="text-accent mr-2">▹</span> Identité professionnelle</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">HTML</span>
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">CSS</span>
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Tailwind</span>
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm border border-primary/30">Git</span>
+          </div>
+   
+          <div class="flex gap-4">
+            <a href="https://github.com/ngalanemedoune7-cmyk/portfolio-medoune" target="_blank" class="flex-1 bg-primary/20 text-white border border-primary/50 px-4 py-3 rounded-xl flex items-center justify-center gap-2">
+              <i class="fab fa-github text-xl"></i>
+              <span class="font-medium">Code</span>
+            </a>
+            <a href="https://portfolio-medoune.vercel.app" target="_blank" class="flex-1 bg-accent/20 text-white border border-accent/50 px-4 py-3 rounded-xl flex items-center justify-center gap-2">
+              <i class="fas fa-external-link-alt text-xl"></i>
+              <span class="font-medium">Démo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <p class="text-center text-gray-400 text-sm mt-8">
+      <i class="fas fa-info-circle text-primary mr-2"></i>
+      Les liens "Code" et "Démo" seront bientôt disponibles pour le projet immobilier.
+    </p>
+    
+  </div>
+</section>
+
+<section id="contact" class="py-20 bg-gradient-to-r from-slate-800 to-slate-900">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-center mb-4 text-primary">
+      <i class="fas fa-paper-plane mr-3"></i> Contact
+    </h2>
+
+    <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+      Vous avez un projet en tête ? Une question sur mon travail ? 
+      Je serais ravi d'échanger avec vous. N'hésitez pas à me contacter !
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+        
+        <h3 class="text-2xl font-bold mb-6 text-white">Travaillons ensemble</h3>
+ 
+        <div class="flex items-start gap-4 mb-6">
+          <div class="bg-primary/20 p-3 rounded-full">
+            <i class="fas fa-envelope text-primary text-xl"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white mb-1">Email</div>
+            <a href="mailto:ngalanemedoune7@gmail.com" class="text-gray-300 hover:text-primary">
+              ngalanemedoune7@gmail.com
+            </a>
+          </div>
+        </div>
+  
+        <div class="flex items-start gap-4 mb-6">
+          <div class="bg-secondary/20 p-3 rounded-full">
+            <i class="fas fa-phone text-secondary text-xl"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white mb-1">Téléphone</div>
+            <a href="tel:+221778656450" class="text-gray-300 hover:text-primary">
+              +221 77 865 64 50
+            </a>
+          </div>
+        </div>
+  
+        <div class="flex items-start gap-4 mb-6">
+          <div class="bg-accent/20 p-3 rounded-full">
+            <i class="fas fa-map-marker-alt text-accent text-xl"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white mb-1">Localisation</div>
+            <p class="text-gray-300">Dakar, Sénégal</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 mb-8">
+          <div class="bg-purple-500/20 p-3 rounded-full">
+            <i class="far fa-clock text-purple-400 text-xl"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white mb-1">Disponibilité</div>
+            <p class="text-gray-300">24h/24, 7j/7</p>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-white mb-4">Suivez-moi</h4>
+          <div class="flex gap-4">
+            <a href="https://linkedin.com/in/medoune-ngalane-ab8a8139a" target="_blank" class="bg-[#0077b5] p-2 rounded-full">
+              <i class="fab fa-linkedin-in text-white text-xl"></i>
+            </a>
+            <a href="https://instagram.com/ngalane_2.0" target="_blank" class="bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-full">
+              <i class="fab fa-instagram text-white text-xl"></i>
+            </a>
+            <a href="https://twitter.com/@MedouneNgalane" target="_blank" class="bg-[#1da1f2] p-2 rounded-full">
+              <i class="fab fa-twitter text-white text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+        
+        <h3 class="text-2xl font-bold mb-6 text-white">Envoyez un message</h3>
+        
+        <form id="contactForm" class="space-y-5">
+ 
+          <div>
+            <label for="name" class="block text-gray-300 mb-2 font-medium">Nom complet</label>
+            <input type="text" id="name" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" placeholder="Votre nom et prénom" required>
+          </div>
+    
+          <div>
+            <label for="email" class="block text-gray-300 mb-2 font-medium">Email *</label>
+            <input type="email" id="email" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" placeholder="votre.email@exemple.com" required>
+          </div>
+    
+          <div>
+            <label for="subject" class="block text-gray-300 mb-2 font-medium">Sujet</label>
+            <input type="text" id="subject" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" placeholder="Objet de votre message">
+          </div>
+
+          <div>
+            <label for="message" class="block text-gray-300 mb-2 font-medium">Message *</label>
+            <textarea id="message" rows="5" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+          </div>
+ 
+          <div class="flex items-start gap-2">
+            <input type="checkbox" id="consent" class="mt-1 accent-primary" required>
+            <label for="consent" class="text-sm text-gray-400">
+              J'accepte que mes données soient utilisées pour me recontacter
+            </label>
+          </div>
+  
+          <button type="submit" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-2">
+            <i class="fas fa-paper-plane"></i>
+            Envoyer le message
+          </button>
+          
+          <p class="text-xs text-gray-500 text-center">* champs obligatoires</p>
+        </form>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<footer class="bg-gradient-to-r from-slate-900 to-black text-white py-12 border-t border-primary/20">
+  <div class="container mx-auto px-4">
+    
+    <div class="grid md:grid-cols-3 gap-8">
+  
+      <div>
+        <a href="#hero" class="text-2xl font-bold text-white inline-block mb-3">
+          <span class="text-primary">MON</span>Portfolio
+        </a>
+        <p class="text-gray-400 text-sm mb-4">
+          Développeur web front-end passionné par la création d'interfaces modernes et performantes.
+        </p>
+        <div class="flex space-x-3">
+          <a href="https://linkedin.com/in/medoune-ngalane-ab8a8139a" target="_blank" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center">
+            <i class="fab fa-linkedin-in text-xs text-gray-300"></i>
+          </a>
+          <a href="https://github.com/ngalanemedoune7-cmyk" target="_blank" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center">
+            <i class="fab fa-github text-xs text-gray-300"></i>
+          </a>
+          <a href="https://instagram.com/ngalane_2.0" target="_blank" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center">
+            <i class="fab fa-instagram text-xs text-gray-300"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-4">Navigation</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#hero" class="text-gray-400 hover:text-primary">Accueil</a></li>
+          <li><a href="#about" class="text-gray-400 hover:text-primary">À propos</a></li>
+          <li><a href="#formation" class="text-gray-400 hover:text-primary">Formation</a></li>
+          <li><a href="#experience" class="text-gray-400 hover:text-primary">Expériences</a></li>
+          <li><a href="#competences" class="text-gray-400 hover:text-primary">Compétences</a></li>
+          <li><a href="#projets" class="text-gray-400 hover:text-primary">Projets</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-4">Contact</h4>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-center gap-2 text-gray-400">
+            <i class="fas fa-envelope text-primary text-xs"></i>
+            <a href="mailto:ngalanemedoune7@gmail.com" class="hover:text-primary">ngalanemedoune7@gmail.com</a>
+          </li>
+          <li class="flex items-center gap-2 text-gray-400">
+            <i class="fas fa-phone text-secondary text-xs"></i>
+            <a href="tel:+221778656450" class="hover:text-primary">+221 77 865 64 50</a>
+          </li>
+          <li class="flex items-center gap-2 text-gray-400">
+            <i class="fas fa-map-marker-alt text-accent text-xs"></i>
+            <span>Dakar, Sénégal</span>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+ 
+    <div class="border-t border-white/10 my-8"></div>
+    
+    <div class="text-center text-gray-400 text-sm">
+      <p>© 2026 Medoune NGALANE. Tous droits réservés.</p>
+      <p class="text-xs text-gray-500 mt-1">Développé avec HTML, Tailwind CSS et JavaScript</p>
+    </div>
+    
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  
+  const spans = menuToggle.querySelectorAll('span');
+  spans[0].classList.toggle('rotate-45');
+  spans[0].classList.toggle('translate-y-2');
+  spans[1].classList.toggle('opacity-0');
+  spans[2].classList.toggle('-rotate-45');
+  spans[2].classList.toggle('-translate-y-2');
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Merci pour votre message ! (Fonctionnalité de démonstration)');
+});
+</script>
+</body>
+</html>
